@@ -11,10 +11,10 @@ export default function HeroSection({ onCalculateClick, onServicesClick }: HeroS
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{
-          backgroundImage: `url('https://cdn.poehali.dev/projects/45534d43-7897-42f9-b9af-85fef1d32bb2/files/71c69ab9-1aac-482f-afc5-10c96042d466.jpg')`,
+          backgroundImage: `url('https://cdn.poehali.dev/files/25012b9c-a4e1-4838-963a-1a053f9f96a0.png')`,
         }}
       />
-      <div className="absolute inset-0 bg-primary/80" />
+      <div className="absolute inset-0 bg-gradient-to-r from-primary/95 via-primary/85 to-primary/70" />
       
       <div className="container mx-auto px-4 relative z-10 text-center animate-fade-in">
         <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">

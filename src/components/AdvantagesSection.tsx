@@ -79,8 +79,8 @@ export default function AdvantagesSection() {
             >
               <div className="flex items-start space-x-4">
                 <div className="flex-shrink-0">
-                  <div className="w-12 h-12 rounded-full bg-secondary/10 flex items-center justify-center">
-                    <Icon name={advantage.icon} className="h-6 w-6 text-secondary" />
+                  <div className="w-12 h-12 rounded-lg bg-accent/10 flex items-center justify-center">
+                    <Icon name={advantage.icon} className="h-6 w-6 text-accent" />
                   </div>
                 </div>
                 <div>

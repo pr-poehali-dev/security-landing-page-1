@@ -35,10 +35,10 @@ export default function Header({ onCallbackClick }: HeaderProps) {
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
           <div className="flex items-center space-x-3">
-            <Icon name="Shield" className="h-10 w-10 text-secondary" />
+            <img src="https://cdn.poehali.dev/projects/45534d43-7897-42f9-b9af-85fef1d32bb2/bucket/2f3ff866-5ed9-43c7-b639-75716624cc39.png" alt="СП Гарант" className="h-12 w-12" />
             <div>
-              <h1 className="text-2xl font-bold text-white leading-tight">СП Гарант</h1>
-              <p className="text-xs text-secondary font-medium">Надежность. Ответственность. Гарантия.</p>
+              <h1 className="text-xl font-bold text-white leading-tight">СП Гарант</h1>
+              <p className="text-[10px] text-secondary font-medium">Надежность. Ответственность. Гарантия.</p>
             </div>
           </div>
 
@@ -66,10 +66,15 @@ export default function Header({ onCallbackClick }: HeaderProps) {
           <div className="hidden lg:flex items-center space-x-6">
             <div className="text-right">
               <p className="text-xs text-secondary font-medium">ООО ЧОП "СП Гарант"</p>
-              <a href="tel:+79789112211" className="text-white font-bold text-lg hover:text-secondary transition-colors">
-                +7 (978) 911-22-11
-              </a>
-              <p className="text-xs text-white">офис@сп-гарант.рф</p>
+              <div className="flex flex-col space-y-0.5">
+                <a href="tel:+79789112112" className="text-white font-bold text-sm hover:text-secondary transition-colors">
+                  +7 (978) 9-112-112
+                </a>
+                <a href="tel:88007777112" className="text-white font-bold text-sm hover:text-secondary transition-colors">
+                  8 800 7777 112
+                </a>
+              </div>
+              <p className="text-xs text-white">office@сп-гарант.рф</p>
             </div>
             <Button onClick={onCallbackClick} className="bg-secondary hover:bg-secondary/90 text-primary font-bold">
               Заказать звонок
@@ -108,10 +113,13 @@ export default function Header({ onCallbackClick }: HeaderProps) {
             </nav>
             <div className="space-y-2">
               <p className="text-xs text-secondary">ООО ЧОП "СП Гарант"</p>
-              <a href="tel:+79789112211" className="text-white font-bold text-lg block">
-                +7 (978) 911-22-11
+              <a href="tel:+79789112112" className="text-white font-bold text-lg block">
+                +7 (978) 9-112-112
               </a>
-              <p className="text-xs text-white">офис@сп-гарант.рф</p>
+              <a href="tel:88007777112" className="text-white font-bold text-lg block">
+                8 800 7777 112
+              </a>
+              <p className="text-xs text-white">office@сп-гарант.рф</p>
               <Button onClick={onCallbackClick} className="bg-secondary hover:bg-secondary/90 text-primary font-bold w-full mt-3">
                 Заказать звонок
               </Button>

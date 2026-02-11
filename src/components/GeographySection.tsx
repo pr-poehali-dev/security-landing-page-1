@@ -62,7 +62,7 @@ export default function GeographySection() {
                 }`}
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
-                <Icon name="MapPin" className="h-6 w-6 text-secondary flex-shrink-0" />
+                <Icon name="MapPin" className="h-6 w-6 text-accent flex-shrink-0" />
                 <span className="text-lg font-medium text-primary">{region.name}</span>
               </div>
             ))}

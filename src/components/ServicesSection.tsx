@@ -68,15 +68,15 @@ export default function ServicesSection() {
               style={{ animationDelay: `${index * 0.15}s` }}
             >
               <div className="flex items-center space-x-4 mb-6">
-                <div className="w-16 h-16 rounded-full bg-secondary/20 flex items-center justify-center">
-                  <Icon name={service.icon} className="h-8 w-8 text-secondary" />
+                <div className="w-16 h-16 rounded-lg bg-accent/10 flex items-center justify-center">
+                  <Icon name={service.icon} className="h-8 w-8 text-accent" />
                 </div>
                 <h3 className="text-2xl font-bold text-primary">{service.title}</h3>
               </div>
               <ul className="space-y-3">
                 {service.items.map((item, idx) => (
                   <li key={idx} className="flex items-start space-x-3">
-                    <Icon name="Check" className="h-5 w-5 text-secondary flex-shrink-0 mt-0.5" />
+                    <Icon name="Check" className="h-5 w-5 text-accent flex-shrink-0 mt-0.5" />
                     <span className="text-muted-foreground">{item}</span>
                   </li>
                 ))}
