@@ -165,15 +165,12 @@ export default function GeographySection() {
                 } ${isVisible ? 'animate-fade-in' : 'opacity-0'}`}
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
-                <span
-                  className={`flex items-center justify-center h-8 w-8 rounded-full text-xs font-bold flex-shrink-0 transition-all ${
-                    activeRegion === index
-                      ? 'bg-secondary text-primary'
-                      : 'bg-primary/10 text-primary'
+                <Icon
+                  name="MapPin"
+                  className={`h-6 w-6 flex-shrink-0 transition-all ${
+                    activeRegion === index ? 'text-secondary' : 'text-accent'
                   }`}
-                >
-                  ГЕО
-                </span>
+                />
                 <span className={`text-lg font-medium transition-colors ${
                   activeRegion === index ? 'text-secondary' : 'text-primary'
                 }`}>
