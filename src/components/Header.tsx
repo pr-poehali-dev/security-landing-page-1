@@ -32,7 +32,7 @@ export default function Header({ onCallbackClick }: HeaderProps) {
         isScrolled ? 'bg-primary/95 backdrop-blur-sm shadow-lg' : 'bg-primary'
       }`}
     >
-      <div className="container mx-auto px-4 py-4">
+      <div className="container mx-auto px-4 py-3">
         <div className="flex items-center justify-between">
           <div className="flex items-center space-x-3">
             <img src="https://cdn.poehali.dev/projects/45534d43-7897-42f9-b9af-85fef1d32bb2/bucket/2f3ff866-5ed9-43c7-b639-75716624cc39.png" alt="СП Гарант" className="h-16 w-16" />
@@ -42,43 +42,44 @@ export default function Header({ onCallbackClick }: HeaderProps) {
             </div>
           </div>
 
-          <nav className="hidden lg:flex items-center space-x-6">
-            <button onClick={() => scrollToSection('hero')} className="text-white hover:text-secondary transition-colors text-sm font-medium">
-              Главная
-            </button>
-            <button onClick={() => scrollToSection('advantages')} className="text-white hover:text-secondary transition-colors text-sm font-medium">
-              Преимущества
-            </button>
-            <button onClick={() => scrollToSection('services')} className="text-white hover:text-secondary transition-colors text-sm font-medium">
-              Услуги
-            </button>
-            <button onClick={() => scrollToSection('why-us')} className="text-white hover:text-secondary transition-colors text-sm font-medium">
-              Почему мы
-            </button>
-            <button onClick={() => scrollToSection('geography')} className="text-white hover:text-secondary transition-colors text-sm font-medium">
-              География
-            </button>
-            <button onClick={() => scrollToSection('contacts')} className="text-white hover:text-secondary transition-colors text-sm font-medium">
-              Контакты
-            </button>
-          </nav>
-
-          <div className="hidden lg:flex items-center space-x-6">
-            <div className="text-right">
-              <p className="text-xs text-secondary font-medium">ООО "ЧОП "СП Гарант"</p>
-              <div className="flex flex-col space-y-0.5">
-                <a href="tel:+79789112112" className="text-white font-bold text-sm hover:text-secondary transition-colors">
-                  +7 (978) 9 112 112
-                </a>
-                <a href="tel:88007777112" className="text-white font-bold text-sm hover:text-secondary transition-colors">
-                  8 800 7777 112
-                </a>
+          <div className="hidden lg:flex flex-col items-end gap-2">
+            <div className="flex items-center space-x-6">
+              <div className="text-right">
+                <p className="text-xs text-secondary font-medium">ООО "ЧОП "СП Гарант"</p>
+                <div className="flex flex-col space-y-0.5">
+                  <a href="tel:+79789112112" className="text-white font-bold text-sm hover:text-secondary transition-colors">
+                    +7 (978) 9 112 112
+                  </a>
+                  <a href="tel:88007777112" className="text-white font-bold text-sm hover:text-secondary transition-colors">
+                    8 800 7777 112
+                  </a>
+                </div>
+                <p className="text-xs text-white">office@сп-гарант.рф</p>
               </div>
-              <p className="text-xs text-white">office@сп-гарант.рф</p>
+              <Button onClick={onCallbackClick} className="bg-secondary hover:bg-secondary/90 text-primary font-bold">
+                Заказать звонок
+              </Button>
             </div>
-            <Button onClick={onCallbackClick} className="bg-secondary hover:bg-secondary/90 text-primary font-bold">
-              Заказать звонок
-            </Button>
+            <nav className="flex items-center space-x-5">
+              <button onClick={() => scrollToSection('hero')} className="text-white hover:text-secondary transition-colors text-sm font-medium">
+                Главная
+              </button>
+              <button onClick={() => scrollToSection('advantages')} className="text-white hover:text-secondary transition-colors text-sm font-medium">
+                Преимущества
+              </button>
+              <button onClick={() => scrollToSection('services')} className="text-white hover:text-secondary transition-colors text-sm font-medium">
+                Услуги
+              </button>
+              <button onClick={() => scrollToSection('why-us')} className="text-white hover:text-secondary transition-colors text-sm font-medium">
+                Почему мы
+              </button>
+              <button onClick={() => scrollToSection('geography')} className="text-white hover:text-secondary transition-colors text-sm font-medium">
+                География
+              </button>
+              <button onClick={() => scrollToSection('contacts')} className="text-white hover:text-secondary transition-colors text-sm font-medium">
+                Контакты
+              </button>
+            </nav>
           </div>
 
           <button
