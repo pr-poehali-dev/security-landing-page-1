@@ -19,13 +19,13 @@ export default function Footer({ onCallbackClick }: FooterProps) {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
           <div>
             <div className="flex items-center space-x-3 mb-4">
-              <img src="https://cdn.poehali.dev/projects/45534d43-7897-42f9-b9af-85fef1d32bb2/bucket/2f3ff866-5ed9-43c7-b639-75716624cc39.png" alt="СП Гарант" className="h-12 w-12" />
+              <img src="https://cdn.poehali.dev/projects/45534d43-7897-42f9-b9af-85fef1d32bb2/bucket/2f3ff866-5ed9-43c7-b639-75716624cc39.png" alt="СП Гарант" className="h-16 w-16" />
               <div>
-                <h3 className="text-xl font-bold">СП Гарант</h3>
-                <p className="text-[10px] text-secondary">Надежность. Ответственность. Гарантия.</p>
+                <h3 className="text-2xl font-bold">СП Гарант</h3>
+                <p className="text-xs text-secondary italic">Надежность. Ответственность. Гарантия.</p>
               </div>
             </div>
-            <p className="text-white/80 text-sm">ООО ЧОП "СП Гарант"</p>
+            <p className="text-white/80 text-sm">ООО "ЧОП "СП Гарант"</p>
             <p className="text-white/60 text-sm mt-2">
               Лицензия на осуществление частной охранной деятельности Л056-00106-91/00034270
             </p>
@@ -36,7 +36,7 @@ export default function Footer({ onCallbackClick }: FooterProps) {
             <div className="space-y-3">
               <a href="tel:+79789112112" className="flex items-center space-x-2 text-secondary hover:text-secondary/80 transition-colors">
                 <Icon name="Phone" className="h-5 w-5" />
-                <span className="font-bold">+7 (978) 9-112-112</span>
+                <span className="font-bold">+7 (978) 9 112 112</span>
               </a>
               <a href="tel:88007777112" className="flex items-center space-x-2 text-secondary hover:text-secondary/80 transition-colors">
                 <Icon name="Phone" className="h-5 w-5" />
@@ -77,7 +77,7 @@ export default function Footer({ onCallbackClick }: FooterProps) {
 
         <div className="border-t border-white/20 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0 text-sm text-white/60">
-            <p>© 2024 ООО ЧОП "СП Гарант". Все права защищены.</p>
+            <p>© 2024 ООО "ЧОП "СП Гарант". Все права защищены.</p>
             <div className="flex space-x-6">
               <a href="#" className="hover:text-secondary transition-colors">
                 Политика конфиденциальности
