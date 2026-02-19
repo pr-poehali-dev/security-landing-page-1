@@ -30,7 +30,7 @@ const advantages = [
   {
     icon: 'UserCheck',
     title: 'Квалифицированные кадры',
-    description: 'Весь персонал прошел профессиональную подготовку и регулярную аттестацию',
+    description: 'Весь персонал имеет профессиональную подготовку и проходит регулярную аттестацию',
   },
 ];
 
@@ -65,9 +65,7 @@ export default function AdvantagesSection() {
         <h2 className="text-4xl md:text-5xl font-bold text-primary text-center mb-4">
           Ключевые преимущества работы с нами
         </h2>
-        <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
-          Полная лицензия на вооруженную охрану и работу с конфиденциальной информацией
-        </p>
+        <div className="mb-12" />
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {advantages.map((advantage, index) => (
             <div

@@ -27,7 +27,7 @@ export default function Footer({ onCallbackClick }: FooterProps) {
             </div>
             <p className="text-white/80 text-sm">ООО ЧОП "СП Гарант"</p>
             <p className="text-white/60 text-sm mt-2">
-              Лицензия на вооруженную охрану и работу с конфиденциальной информацией
+              Лицензия на осуществление частной охранной деятельности Л056-00106-91/00034270
             </p>
           </div>
 

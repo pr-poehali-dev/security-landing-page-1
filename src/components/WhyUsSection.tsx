@@ -1,10 +1,10 @@
 import { useEffect, useRef, useState } from 'react';
 
 const stats = [
-  { number: '8+', label: 'лет на рынке охранных услуг' },
+  { number: '10+', label: 'лет на рынке охранных услуг' },
   { number: '500+', label: 'успешно охраняемых объектов и единиц имущества' },
   { number: '100%', label: 'консультирование и правовые рекомендации по защите' },
-  { number: '100+', label: 'обеспечено порядка на массовых мероприятиях' },
+  { number: '100%', label: 'обеспечение порядка на массовых мероприятиях' },
 ];
 
 export default function WhyUsSection() {

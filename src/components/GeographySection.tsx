@@ -6,7 +6,7 @@ const regions = [
   { name: 'Крым', coords: [44.948636, 34.100187] },
   { name: 'Ростов-на-Дону', coords: [47.222583, 39.713491] },
   { name: 'Москва и МО', coords: [55.760160, 37.608244] },
-  { name: 'Присоединенные регионы', coords: [48.024435, 37.789873] },
+  { name: 'Новые регионы', coords: [48.024435, 37.789873] },
 ];
 
 export default function GeographySection() {
