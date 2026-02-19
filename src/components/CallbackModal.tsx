@@ -6,6 +6,8 @@ import { Textarea } from '@/components/ui/textarea';
 import { useState } from 'react';
 import { useToast } from '@/hooks/use-toast';
 
+const SEND_CALLBACK_URL = 'https://functions.poehali.dev/eebceec1-ed39-43fa-81a7-ba9fa2830f27';
+
 interface CallbackModalProps {
   open: boolean;
   onClose: () => void;
@@ -17,18 +19,39 @@ export default function CallbackModal({ open, onClose }: CallbackModalProps) {
   const [comment, setComment] = useState('');
   const { toast } = useToast();
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    
-    toast({
-      title: 'Заявка отправлена!',
-      description: 'Мы свяжемся с вами в ближайшее время.',
-    });
+  const [loading, setLoading] = useState(false);
 
-    setName('');
-    setPhone('');
-    setComment('');
-    onClose();
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setLoading(true);
+
+    try {
+      const res = await fetch(SEND_CALLBACK_URL, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ name, phone, comment }),
+      });
+
+      if (!res.ok) throw new Error('Ошибка отправки');
+
+      toast({
+        title: 'Заявка отправлена!',
+        description: 'Мы свяжемся с вами в ближайшее время.',
+      });
+
+      setName('');
+      setPhone('');
+      setComment('');
+      onClose();
+    } catch {
+      toast({
+        title: 'Ошибка',
+        description: 'Не удалось отправить заявку. Позвоните нам по телефону.',
+        variant: 'destructive',
+      });
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -72,8 +95,8 @@ export default function CallbackModal({ open, onClose }: CallbackModalProps) {
               rows={4}
             />
           </div>
-          <Button type="submit" className="w-full bg-secondary hover:bg-secondary/90 text-primary font-bold">
-            Отправить заявку
+          <Button type="submit" disabled={loading} className="w-full bg-secondary hover:bg-secondary/90 text-primary font-bold">
+            {loading ? 'Отправка...' : 'Отправить заявку'}
           </Button>
           <p className="text-xs text-muted-foreground text-center">
             Нажимая кнопку, вы соглашаетесь с политикой конфиденциальности
