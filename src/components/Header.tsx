@@ -116,19 +116,25 @@ export default function Header({ onCallbackClick }: HeaderProps) {
                 Контакты
               </button>
             </nav>
-            <div className="space-y-2">
-              <p className="text-xs text-secondary">ООО "ЧОП "СП Гарант"</p>
-              <a href="tel:+79789112112" className="text-white font-bold text-lg block">
-                +7 (978) 9 112 112
-              </a>
-              <a href="tel:88007777112" className="text-white font-bold text-lg block">
-                8 800 7777 112
-              </a>
-              <p className="text-xs text-white">office@сп-гарант.рф</p>
-              <Button onClick={onCallbackClick} className="bg-secondary hover:bg-secondary/90 text-primary font-bold w-full mt-3">
-                Заказать звонок
-              </Button>
+            <div className="grid grid-cols-2 gap-4 mb-4">
+              <div>
+                <p className="text-secondary font-bold text-xs mb-1">Москва</p>
+                <a href="tel:88007777112" className="text-white font-bold text-base block">
+                  8 (800) 7777 112
+                </a>
+                <p className="text-white/60 text-[11px] leading-tight mt-1">123 112, Россия, г. Москва, Пресненская наб., 10</p>
+              </div>
+              <div>
+                <p className="text-secondary font-bold text-xs mb-1">Крым</p>
+                <a href="tel:+79789112112" className="text-white font-bold text-base block">
+                  +7 (978) 9 112 112
+                </a>
+                <p className="text-white/60 text-[11px] leading-tight mt-1">295 017, Россия, Республика Крым, г. Симферополь, ул. Воровского, 17</p>
+              </div>
             </div>
+            <Button onClick={onCallbackClick} className="bg-secondary hover:bg-secondary/90 text-primary font-bold w-full">
+              Заказать звонок
+            </Button>
           </div>
         )}
       </div>
