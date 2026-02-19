@@ -35,16 +35,15 @@ export default function Header({ onCallbackClick }: HeaderProps) {
       <div className="container mx-auto px-4 py-3">
         <div className="flex items-center justify-between">
           <div className="flex items-center space-x-3">
-            <img src="https://cdn.poehali.dev/projects/45534d43-7897-42f9-b9af-85fef1d32bb2/bucket/2f3ff866-5ed9-43c7-b639-75716624cc39.png" alt="СП Гарант" className="h-16 w-16" />
+            <img src="https://cdn.poehali.dev/projects/45534d43-7897-42f9-b9af-85fef1d32bb2/bucket/2f3ff866-5ed9-43c7-b639-75716624cc39.png" alt="СП Гарант" className="h-20 w-20" />
             <div>
-              <h1 className="text-2xl font-bold text-white leading-tight">СП Гарант</h1>
-              <p className="text-xs text-secondary font-medium italic">Надежность. Ответственность. Гарантия.</p>
+              <h1 className="text-3xl font-extrabold text-white leading-tight tracking-wide">СП Гарант</h1>
+              <p className="text-sm text-secondary font-medium italic">Надежность. Ответственность. Гарантия.</p>
             </div>
           </div>
 
           <div className="hidden lg:flex flex-col items-end gap-2">
             <div className="flex items-center space-x-6">
-              <p className="text-xs text-secondary font-medium">ООО "ЧОП "СП Гарант"</p>
               <div className="flex items-start space-x-6">
                 <div className="text-right">
                   <p className="text-secondary font-bold text-xs mb-0.5">Москва</p>
@@ -61,14 +60,9 @@ export default function Header({ onCallbackClick }: HeaderProps) {
                   <p className="text-white/60 text-[11px] leading-tight mt-0.5">295 017, Россия, Республика Крым,<br/>г. Симферополь, ул. Воровского, 17</p>
                 </div>
               </div>
-              <div className="flex flex-col items-end gap-1">
-                <Button onClick={onCallbackClick} className="bg-secondary hover:bg-secondary/90 text-primary font-bold">
-                  Заказать звонок
-                </Button>
-                <a href="mailto:office@сп-гарант.рф" className="text-xs text-white hover:text-secondary transition-colors">
-                  office@сп-гарант.рф
-                </a>
-              </div>
+              <Button onClick={onCallbackClick} className="bg-secondary hover:bg-secondary/90 text-primary font-bold">
+                Заказать звонок
+              </Button>
             </div>
             <nav className="flex items-center space-x-5">
               <button onClick={() => scrollToSection('hero')} className="text-white hover:text-secondary transition-colors text-sm font-medium">
