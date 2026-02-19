@@ -44,21 +44,31 @@ export default function Header({ onCallbackClick }: HeaderProps) {
 
           <div className="hidden lg:flex flex-col items-end gap-2">
             <div className="flex items-center space-x-6">
-              <div className="text-right">
-                <p className="text-xs text-secondary font-medium">ООО "ЧОП "СП Гарант"</p>
-                <div className="flex flex-col space-y-0.5">
-                  <a href="tel:+79789112112" className="text-white font-bold text-sm hover:text-secondary transition-colors">
+              <p className="text-xs text-secondary font-medium">ООО "ЧОП "СП Гарант"</p>
+              <div className="flex items-start space-x-6">
+                <div className="text-right">
+                  <p className="text-secondary font-bold text-xs mb-0.5">Москва</p>
+                  <a href="tel:88007777112" className="text-white font-bold text-sm hover:text-secondary transition-colors block">
+                    8 (800) 7777 112
+                  </a>
+                  <p className="text-white/60 text-[11px] leading-tight mt-0.5">123 112, Россия, г. Москва,<br/>Пресненская наб., 10</p>
+                </div>
+                <div className="text-right">
+                  <p className="text-secondary font-bold text-xs mb-0.5">Крым</p>
+                  <a href="tel:+79789112112" className="text-white font-bold text-sm hover:text-secondary transition-colors block">
                     +7 (978) 9 112 112
                   </a>
-                  <a href="tel:88007777112" className="text-white font-bold text-sm hover:text-secondary transition-colors">
-                    8 800 7777 112
-                  </a>
+                  <p className="text-white/60 text-[11px] leading-tight mt-0.5">295 017, Россия, Республика Крым,<br/>г. Симферополь, ул. Воровского, 17</p>
                 </div>
-                <p className="text-xs text-white">office@сп-гарант.рф</p>
               </div>
-              <Button onClick={onCallbackClick} className="bg-secondary hover:bg-secondary/90 text-primary font-bold">
-                Заказать звонок
-              </Button>
+              <div className="flex flex-col items-end gap-1">
+                <Button onClick={onCallbackClick} className="bg-secondary hover:bg-secondary/90 text-primary font-bold">
+                  Заказать звонок
+                </Button>
+                <a href="mailto:office@сп-гарант.рф" className="text-xs text-white hover:text-secondary transition-colors">
+                  office@сп-гарант.рф
+                </a>
+              </div>
             </div>
             <nav className="flex items-center space-x-5">
               <button onClick={() => scrollToSection('hero')} className="text-white hover:text-secondary transition-colors text-sm font-medium">
