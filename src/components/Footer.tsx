@@ -77,7 +77,7 @@ export default function Footer({ onCallbackClick }: FooterProps) {
 
         <div className="border-t border-white/20 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0 text-sm text-white/60">
-            <p>© 2024 ООО "ЧОП "СП Гарант". Все права защищены.</p>
+            <p>© 2026 ООО "ЧОП "СП Гарант". Все права защищены.</p>
             <div className="flex space-x-6">
               <a href="#" className="hover:text-secondary transition-colors">
                 Политика конфиденциальности
