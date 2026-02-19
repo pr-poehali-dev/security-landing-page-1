@@ -33,24 +33,30 @@ export default function Footer({ onCallbackClick }: FooterProps) {
 
           <div>
             <h4 className="text-xl font-bold mb-4">Контакты</h4>
-            <div className="space-y-3">
-              <a href="tel:+79789112112" className="flex items-center space-x-2 text-secondary hover:text-secondary/80 transition-colors">
-                <Icon name="Phone" className="h-5 w-5" />
-                <span className="font-bold">+7 (978) 9 112 112</span>
-              </a>
-              <a href="tel:88007777112" className="flex items-center space-x-2 text-secondary hover:text-secondary/80 transition-colors">
-                <Icon name="Phone" className="h-5 w-5" />
-                <span className="font-bold">8 800 7777 112</span>
-              </a>
+            <div className="space-y-4">
+              <div>
+                <p className="text-white/60 text-xs mb-1">Москва</p>
+                <a href="tel:88007777112" className="flex items-center space-x-2 text-secondary hover:text-secondary/80 transition-colors">
+                  <Icon name="Phone" className="h-5 w-5" />
+                  <span className="font-bold">8 (800) 7777 112</span>
+                </a>
+              </div>
+              <div>
+                <p className="text-white/60 text-xs mb-1">Крым</p>
+                <a href="tel:+79789112112" className="flex items-center space-x-2 text-secondary hover:text-secondary/80 transition-colors">
+                  <Icon name="Phone" className="h-5 w-5" />
+                  <span className="font-bold">+7 (978) 9 112 112</span>
+                </a>
+              </div>
               <a href="mailto:office@сп-гарант.рф" className="flex items-center space-x-2 text-white/80 hover:text-white transition-colors">
                 <Icon name="Mail" className="h-5 w-5" />
                 <span>office@сп-гарант.рф</span>
               </a>
-              <div className="flex items-start space-x-2 text-white/80 mt-2">
+              <div className="flex items-start space-x-2 text-white/80">
                 <Icon name="MapPin" className="h-5 w-5 flex-shrink-0 mt-0.5" />
-                <span className="text-sm">123 112, г. Москва, Пресненская наб., 10</span>
+                <span className="text-sm">123 112, Россия, г. Москва, Пресненская наб., 10</span>
               </div>
-              <div className="flex items-start space-x-2 text-white/80 mt-1">
+              <div className="flex items-start space-x-2 text-white/80">
                 <Icon name="MapPin" className="h-5 w-5 flex-shrink-0 mt-0.5" />
                 <span className="text-sm">295 017, Россия, Республика Крым, г. Симферополь, ул. Воровского, 17</span>
               </div>
