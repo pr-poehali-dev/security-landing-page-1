@@ -1,11 +1,21 @@
+import { useState } from 'react';
 import Icon from '@/components/ui/icon';
 import { Button } from '@/components/ui/button';
+import PdfModal from '@/components/PdfModal';
 
 interface FooterProps {
   onCallbackClick: () => void;
 }
 
+const DOCS = [
+  { key: 'privacy', title: 'Политика конфиденциальности', url: '' },
+  { key: 'personal', title: 'Согласие на обработку персональных данных', url: '' },
+  { key: 'sms', title: 'Согласие на отправку СМС', url: '' },
+];
+
 export default function Footer({ onCallbackClick }: FooterProps) {
+  const [activeDoc, setActiveDoc] = useState<{ title: string; url: string } | null>(null);
+
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
     if (element) {
@@ -86,19 +96,31 @@ export default function Footer({ onCallbackClick }: FooterProps) {
         </div>
 
         <div className="border-t border-white/20 pt-8">
-          <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0 text-sm text-white/60">
+          <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 text-sm text-white/60">
             <p>© 2026 ООО "ЧОП "СП Гарант". Все права защищены.</p>
-            <div className="flex space-x-6">
-              <a href="#" className="hover:text-secondary transition-colors">
-                Политика конфиденциальности
-              </a>
-              <a href="#" className="hover:text-secondary transition-colors">
-                Согласие на обработку данных
-              </a>
+            <div className="flex flex-col md:flex-row gap-3 md:gap-6">
+              {DOCS.map((doc) => (
+                <button
+                  key={doc.key}
+                  onClick={() => setActiveDoc(doc)}
+                  className="text-left hover:text-secondary transition-colors underline underline-offset-2 decoration-white/30 hover:decoration-secondary"
+                >
+                  {doc.title}
+                </button>
+              ))}
             </div>
           </div>
         </div>
       </div>
+
+      {activeDoc && (
+        <PdfModal
+          isOpen={!!activeDoc}
+          onClose={() => setActiveDoc(null)}
+          title={activeDoc.title}
+          pdfUrl={activeDoc.url}
+        />
+      )}
     </footer>
   );
 }
