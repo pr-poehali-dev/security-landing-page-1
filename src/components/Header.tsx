@@ -50,7 +50,7 @@ export default function Header({ onCallbackClick }: HeaderProps) {
                   <a href="tel:88007777112" className="text-white font-bold text-sm hover:text-secondary transition-colors block">
                     8 (800) 7777 112
                   </a>
-                  <p className="text-white/60 text-[11px] leading-tight mt-0.5">123 112, Россия, г. Москва,<br/>Пресненская наб., 10</p>
+                  <p className="text-white/60 text-[11px] leading-tight mt-0.5">123 112, Россия, г. Москва,<br/>Пресненская наб., 12, Башня Федерации</p>
                 </div>
                 <div className="text-right">
                   <p className="text-secondary font-bold text-xs mb-0.5">Крым</p>
@@ -122,7 +122,7 @@ export default function Header({ onCallbackClick }: HeaderProps) {
                 <a href="tel:88007777112" className="text-white font-bold text-base block">
                   8 (800) 7777 112
                 </a>
-                <p className="text-white/60 text-[11px] leading-tight mt-1">123 112, Россия, г. Москва, Пресненская наб., 10</p>
+                <p className="text-white/60 text-[11px] leading-tight mt-1">123 112, Россия, г. Москва, Пресненская наб., 12, Башня Федерации</p>
               </div>
               <div>
                 <p className="text-secondary font-bold text-xs mb-1">Крым</p>

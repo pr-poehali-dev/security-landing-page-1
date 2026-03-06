@@ -64,7 +64,7 @@ export default function Footer({ onCallbackClick }: FooterProps) {
               </a>
               <div className="flex items-start space-x-2 text-white/80">
                 <Icon name="MapPin" className="h-5 w-5 flex-shrink-0 mt-0.5" />
-                <span className="text-sm">123 112, Россия, г. Москва, Пресненская наб., 10</span>
+                <span className="text-sm">123 112, Россия, г. Москва, Пресненская наб., 12, Башня Федерации</span>
               </div>
               <div className="flex items-start space-x-2 text-white/80">
                 <Icon name="MapPin" className="h-5 w-5 flex-shrink-0 mt-0.5" />
