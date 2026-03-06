@@ -2,19 +2,20 @@ import { useState } from 'react';
 import Icon from '@/components/ui/icon';
 import { Button } from '@/components/ui/button';
 import PdfModal from '@/components/PdfModal';
+import { privacyPolicyContent, personalDataConsentContent, smsConsentContent } from '@/data/legalDocs';
 
 interface FooterProps {
   onCallbackClick: () => void;
 }
 
 const DOCS = [
-  { key: 'privacy', title: 'Политика конфиденциальности', url: '' },
-  { key: 'personal', title: 'Согласие на обработку персональных данных', url: '' },
-  { key: 'sms', title: 'Согласие на отправку СМС', url: '' },
+  { key: 'privacy', title: 'Политика конфиденциальности', content: privacyPolicyContent },
+  { key: 'personal', title: 'Согласие на обработку персональных данных', content: personalDataConsentContent },
+  { key: 'sms', title: 'Согласие на отправку СМС', content: smsConsentContent },
 ];
 
 export default function Footer({ onCallbackClick }: FooterProps) {
-  const [activeDoc, setActiveDoc] = useState<{ title: string; url: string } | null>(null);
+  const [activeDoc, setActiveDoc] = useState<{ title: string; content: React.ReactNode } | null>(null);
 
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
@@ -102,7 +103,7 @@ export default function Footer({ onCallbackClick }: FooterProps) {
               {DOCS.map((doc) => (
                 <button
                   key={doc.key}
-                  onClick={() => setActiveDoc(doc)}
+                  onClick={() => setActiveDoc({ title: doc.title, content: doc.content })}
                   className="text-left hover:text-secondary transition-colors underline underline-offset-2 decoration-white/30 hover:decoration-secondary"
                 >
                   {doc.title}
@@ -118,7 +119,7 @@ export default function Footer({ onCallbackClick }: FooterProps) {
           isOpen={!!activeDoc}
           onClose={() => setActiveDoc(null)}
           title={activeDoc.title}
-          pdfUrl={activeDoc.url}
+          content={activeDoc.content}
         />
       )}
     </footer>
