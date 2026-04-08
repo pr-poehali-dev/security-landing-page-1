@@ -4,6 +4,7 @@ import HeroSection from '@/components/HeroSection';
 import AdvantagesSection from '@/components/AdvantagesSection';
 import WhyUsSection from '@/components/WhyUsSection';
 import StepsSection from '@/components/StepsSection';
+import TariffsSection from '@/components/TariffsSection';
 import GeographySection from '@/components/GeographySection';
 import ServicesSection from '@/components/ServicesSection';
 import Footer from '@/components/Footer';
@@ -11,8 +12,15 @@ import CallbackModal from '@/components/CallbackModal';
 
 export default function Index() {
   const [isCallbackModalOpen, setIsCallbackModalOpen] = useState(false);
+  const [selectedTariff, setSelectedTariff] = useState<string | undefined>(undefined);
 
   const handleCallbackClick = () => {
+    setSelectedTariff(undefined);
+    setIsCallbackModalOpen(true);
+  };
+
+  const handleTariffOrder = (tariff: string) => {
+    setSelectedTariff(tariff);
     setIsCallbackModalOpen(true);
   };
 
@@ -30,10 +38,15 @@ export default function Index() {
       <AdvantagesSection />
       <WhyUsSection />
       <StepsSection />
+      <TariffsSection onOrderClick={handleTariffOrder} />
       <GeographySection />
       <ServicesSection />
       <Footer onCallbackClick={handleCallbackClick} />
-      <CallbackModal open={isCallbackModalOpen} onClose={() => setIsCallbackModalOpen(false)} />
+      <CallbackModal
+        open={isCallbackModalOpen}
+        onClose={() => setIsCallbackModalOpen(false)}
+        selectedTariff={selectedTariff}
+      />
       <div className="fixed bottom-0 left-0 right-0 z-50 p-3 bg-primary/95 backdrop-blur-sm border-t border-white/10 lg:hidden">
         <button
           onClick={handleCallbackClick}

@@ -3,7 +3,7 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Textarea } from '@/components/ui/textarea';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useToast } from '@/hooks/use-toast';
 
 const SEND_CALLBACK_URL = 'https://functions.poehali.dev/eebceec1-ed39-43fa-81a7-ba9fa2830f27';
@@ -11,15 +11,21 @@ const SEND_CALLBACK_URL = 'https://functions.poehali.dev/eebceec1-ed39-43fa-81a7
 interface CallbackModalProps {
   open: boolean;
   onClose: () => void;
+  selectedTariff?: string;
 }
 
-export default function CallbackModal({ open, onClose }: CallbackModalProps) {
+export default function CallbackModal({ open, onClose, selectedTariff }: CallbackModalProps) {
   const [name, setName] = useState('');
   const [phone, setPhone] = useState('');
   const [comment, setComment] = useState('');
   const { toast } = useToast();
-
   const [loading, setLoading] = useState(false);
+
+  useEffect(() => {
+    if (selectedTariff && open) {
+      setComment(`Выбранный тариф: ${selectedTariff}`);
+    }
+  }, [selectedTariff, open]);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -60,10 +66,17 @@ export default function CallbackModal({ open, onClose }: CallbackModalProps) {
         <DialogHeader>
           <DialogTitle className="text-2xl font-bold text-primary">Заказать звонок</DialogTitle>
           <DialogDescription>
-            Оставьте свои контактные данные, и наш специалист свяжется с вами в течение 15 минут
+            {selectedTariff
+              ? `Вы выбрали: ${selectedTariff}. Оставьте контакты — свяжемся в течение 15 минут.`
+              : 'Оставьте свои контактные данные, и наш специалист свяжется с вами в течение 15 минут'}
           </DialogDescription>
         </DialogHeader>
         <form onSubmit={handleSubmit} className="space-y-4 mt-4">
+          {selectedTariff && (
+            <div className="bg-secondary/10 border border-secondary/30 rounded-md px-4 py-2 text-sm font-semibold text-primary">
+              {selectedTariff}
+            </div>
+          )}
           <div className="space-y-2">
             <Label htmlFor="name">Имя *</Label>
             <Input
@@ -92,7 +105,7 @@ export default function CallbackModal({ open, onClose }: CallbackModalProps) {
               placeholder="Опишите ваш объект или задачу"
               value={comment}
               onChange={(e) => setComment(e.target.value)}
-              rows={4}
+              rows={3}
             />
           </div>
           <Button type="submit" disabled={loading} className="w-full bg-secondary hover:bg-secondary/90 text-primary font-bold">
