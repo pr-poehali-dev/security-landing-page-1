@@ -7,6 +7,7 @@ interface Tariff {
   arming: string;
   experience: string;
   qualification: string;
+  extras?: string[];
   price: string;
 }
 
@@ -14,18 +15,19 @@ const TARIFFS: Tariff[] = [
   {
     id: 'econom',
     name: 'ТАРИФ «ЭКОНОМ»',
-    arming: 'Без оружия',
+    arming: 'Спецсредства',
     experience: 'Более года',
     qualification: '4 разряд',
-    price: 'от 120 000 ₽',
+    price: 'от 145 000 ₽',
   },
   {
     id: 'business',
     name: 'ТАРИФ «БИЗНЕС»',
     arming: 'Спецсредства',
     experience: 'Более 3 лет',
-    qualification: '4/5 разряд',
-    price: 'от 150 000 ₽',
+    qualification: '4 разряд',
+    extras: ['Выезд мобильной группы'],
+    price: 'от 180 000 ₽',
   },
   {
     id: 'vip',
@@ -33,7 +35,8 @@ const TARIFFS: Tariff[] = [
     arming: 'Служебное',
     experience: 'Более 5 лет',
     qualification: '5/6 разряд',
-    price: 'от 250 000 ₽',
+    extras: ['Выезд мобильной группы', 'Еженедельный индивидуальный отчёт по стандартной форме'],
+    price: 'от 205 000 ₽',
   },
 ];
 
@@ -96,6 +99,21 @@ export default function TariffsSection({ onOrderClick }: TariffsSectionProps) {
                       </span>
                       <span className="text-white text-sm text-right">{tariff.qualification}</span>
                     </div>
+                    {tariff.extras && tariff.extras.length > 0 && (
+                      <div className="pt-2 border-t border-white/10">
+                        <span className="text-secondary text-sm font-medium underline underline-offset-2 decoration-secondary/40 block mb-2">
+                          Доп. услуги:
+                        </span>
+                        <ul className="space-y-1">
+                          {tariff.extras.map((extra, i) => (
+                            <li key={i} className="text-white text-sm flex gap-2">
+                              <span className="text-secondary mt-0.5">•</span>
+                              <span>{extra}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    )}
                   </div>
 
                   <Button
