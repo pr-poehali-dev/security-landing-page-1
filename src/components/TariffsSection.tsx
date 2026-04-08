@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Button } from '@/components/ui/button';
+import Icon from '@/components/ui/icon';
 
 interface Tariff {
   id: string;
@@ -106,8 +107,8 @@ export default function TariffsSection({ onOrderClick }: TariffsSectionProps) {
                         </span>
                         <ul className="space-y-1">
                           {tariff.extras.map((extra, i) => (
-                            <li key={i} className="text-white text-sm flex gap-2">
-                              <span className="text-secondary mt-0.5">•</span>
+                            <li key={i} className="text-white text-sm flex gap-2 items-start">
+                              <Icon name="CircleCheck" size={15} className="text-secondary mt-0.5 shrink-0" />
                               <span>{extra}</span>
                             </li>
                           ))}
