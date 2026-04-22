@@ -1,0 +1,40 @@
+interface PartnerBannerSectionProps {
+  onCallbackClick: () => void;
+}
+
+export default function PartnerBannerSection({ onCallbackClick }: PartnerBannerSectionProps) {
+  return (
+    <section className="bg-primary py-16 overflow-hidden">
+      <div className="container mx-auto px-4">
+        <div className="flex flex-col md:flex-row items-center justify-between gap-10">
+          <div className="flex-1 flex flex-col items-start gap-8">
+            <h2 className="text-3xl md:text-5xl font-extrabold text-white leading-tight uppercase">
+              Приведи клиента —<br />получи дивиденды
+            </h2>
+            <button
+              onClick={onCallbackClick}
+              className="inline-flex items-center gap-2 border-2 border-secondary text-secondary hover:bg-secondary hover:text-primary font-bold px-7 py-3 rounded transition-colors text-base tracking-widest uppercase"
+            >
+              Заказать звонок
+              <span className="text-lg">📞</span>
+            </button>
+          </div>
+
+          <div className="flex-1 flex justify-center md:justify-end">
+            <div className="relative">
+              <img
+                src="https://cdn.poehali.dev/projects/45534d43-7897-42f9-b9af-85fef1d32bb2/bucket/1d38895e-5ba1-4f1e-8ab4-415f032e2862.png"
+                alt="Партнёрская программа"
+                className="w-full max-w-sm rounded-lg object-cover opacity-90"
+              />
+              <div className="absolute bottom-6 right-4 bg-primary/80 border border-secondary/40 backdrop-blur-sm rounded px-4 py-3 flex flex-col gap-1">
+                <span className="text-secondary font-bold text-sm tracking-wide">1. Проценты от контракта</span>
+                <span className="text-secondary font-bold text-sm tracking-wide">2. Выплаты ежемесячно</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}

@@ -4,6 +4,7 @@ import HeroSection from '@/components/HeroSection';
 import AdvantagesSection from '@/components/AdvantagesSection';
 import WhyUsSection from '@/components/WhyUsSection';
 import StepsSection from '@/components/StepsSection';
+import PartnerBannerSection from '@/components/PartnerBannerSection';
 import TariffsSection from '@/components/TariffsSection';
 import GeographySection from '@/components/GeographySection';
 import ServicesSection from '@/components/ServicesSection';
@@ -38,6 +39,7 @@ export default function Index() {
       <AdvantagesSection />
       <WhyUsSection />
       <StepsSection />
+      <PartnerBannerSection onCallbackClick={handleCallbackClick} />
       <TariffsSection onOrderClick={handleTariffOrder} />
       <GeographySection />
       <ServicesSection />
