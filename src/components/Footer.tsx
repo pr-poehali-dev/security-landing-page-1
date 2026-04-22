@@ -73,7 +73,7 @@ export default function Footer({ onCallbackClick }: FooterProps) {
               </div>
               <div className="flex items-start space-x-2 text-white/80">
                 <Icon name="MapPin" className="h-5 w-5 flex-shrink-0 mt-0.5" />
-                <span className="text-sm">295 017, Россия, Республика Крым, г. Симферополь, ул. Воровского, 17</span>
+                <span className="text-sm">295 017, Россия, Республика Крым, г. Симферополь, ул. Воровского, 17, БЦ Мараканд</span>
               </div>
             </div>
           </div>
