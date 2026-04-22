@@ -63,6 +63,10 @@ export default function Footer({ onCallbackClick }: FooterProps) {
                 <Icon name="Mail" className="h-5 w-5" />
                 <span>office@сп-гарант.рф</span>
               </a>
+              <div className="flex items-center space-x-2 text-white/80">
+                <Icon name="Clock" className="h-5 w-5 flex-shrink-0" />
+                <span className="text-sm">Пн–Пт: 08:00–17:00</span>
+              </div>
               <div className="flex items-start space-x-2 text-white/80">
                 <Icon name="MapPin" className="h-5 w-5 flex-shrink-0 mt-0.5" />
                 <span className="text-sm">123 112, Россия, г. Москва, Пресненская наб., 12, Башня Федерации</span>
