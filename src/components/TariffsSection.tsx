@@ -9,7 +9,7 @@ interface Tariff {
   experience: string;
   qualification: string;
   schedule: string;
-  extras?: { text: string; bold?: boolean }[];
+  extras?: { text: string; bold?: boolean; underline?: boolean }[];
   price: string;
 }
 
@@ -36,9 +36,10 @@ const TARIFFS: Tariff[] = [
     schedule: '24 часа',
     extras: [
       { text: 'Контроль доступа (пропускной режим)' },
-      { text: 'Патрулирование объекта' },
+      { text: 'Вызов вооруженной мобильной группы 24/7' },
       { text: 'Вызов экстренных служб' },
-      { text: 'Вызов вооруженной мобильной группы' },
+      { text: 'Патрулирование объекта' },
+      { text: 'Регулярные проверки инспекторской службой 24/7' },
       { text: 'Индивидуальный менеджер' },
       { text: 'Страхование ответственности' },
       { text: 'Ведение журнала посещений' },
@@ -55,30 +56,30 @@ const TARIFFS: Tariff[] = [
     schedule: '24 часа',
     extras: [
       { text: 'Контроль доступа (пропускной режим)' },
-      { text: 'Патрулирование объекта' },
+      { text: 'Вызов вооруженной мобильной группы 24/7' },
       { text: 'Вызов экстренных служб' },
-      { text: 'Вызов вооруженной мобильной группы' },
+      { text: 'Патрулирование объекта' },
       { text: 'Индивидуальный менеджер' },
       { text: 'Страхование ответственности' },
       { text: 'Ведение журнала посещений' },
       { text: 'Отчет в онлайн режиме во внутреннем мессенджере' },
       { text: 'Еженедельная сводная отчетность по показателям' },
-      { text: 'Регулярные проверки инспекторской службой' },
-      { text: 'Услуги полиграфа до 2 р/мес', bold: true },
-      { text: 'Проверка безопасности контрагентов и сотрудников заказчика до 5 шт/мес', bold: true },
+      { text: 'Регулярные проверки инспекторской службой 24/7' },
+      { text: 'Услуги полиграфа до 2 услуги в месяц', bold: true },
+      { text: 'Проверка безопасности контрагентов и сотрудников заказчика до 5 проверок в месяц', bold: true },
     ],
     price: 'от 205 000 ₽',
   },
   {
     id: 'spec',
     name: 'ТАРИФ «СПЕЦ»',
-    arming: 'Служебное',
-    experience: 'Более 3 лет',
+    arming: 'Специальное огнестрельное',
+    experience: 'Более 5 лет',
     qualification: '6 разряд',
     schedule: '24 часа',
     extras: [
-      { text: 'Все функции пакета «Престиж»' },
-      { text: 'Комплекс мер физической защиты с правом применения табельного оружия для отражения вооруженного нападения' },
+      { text: 'Все функции пакета «Престиж»', underline: true },
+      { text: 'Комплекс мер физической защиты с правом применения табельного оружия для отражения вооруженного нападения', underline: true },
     ],
     price: 'от 365 000 ₽',
   },
@@ -158,7 +159,7 @@ export default function TariffsSection({ onOrderClick }: TariffsSectionProps) {
                           {tariff.extras.map((extra, i) => (
                             <li key={i} className="text-white text-sm flex gap-2 items-start">
                               <Icon name="CircleCheck" size={15} className="text-secondary mt-0.5 shrink-0" />
-                              <span className={extra.bold ? 'font-bold' : ''}>{extra.text}</span>
+                              <span className={extra.bold ? 'font-bold' : extra.underline ? 'underline underline-offset-2' : ''}>{extra.text}</span>
                             </li>
                           ))}
                         </ul>
