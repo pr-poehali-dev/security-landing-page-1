@@ -8,17 +8,23 @@ interface Tariff {
   arming: string;
   experience: string;
   qualification: string;
-  extras?: string[];
+  schedule: string;
+  extras?: { text: string; bold?: boolean }[];
   price: string;
 }
 
 const TARIFFS: Tariff[] = [
   {
-    id: 'econom',
-    name: 'ТАРИФ «ЭКОНОМ»',
+    id: 'basic',
+    name: 'ТАРИФ «БАЗОВЫЙ»',
     arming: 'Спецсредства',
     experience: 'Более года',
     qualification: '4 разряд',
+    schedule: '24 часа',
+    extras: [
+      { text: 'Контроль доступа (пропускной режим)' },
+      { text: 'Вызов экстренных служб' },
+    ],
     price: 'от 145 000 ₽',
   },
   {
@@ -27,17 +33,54 @@ const TARIFFS: Tariff[] = [
     arming: 'Спецсредства',
     experience: 'Более 3 лет',
     qualification: '4 разряд',
-    extras: ['Выезд мобильной группы'],
+    schedule: '24 часа',
+    extras: [
+      { text: 'Контроль доступа (пропускной режим)' },
+      { text: 'Патрулирование объекта' },
+      { text: 'Вызов экстренных служб' },
+      { text: 'Вызов вооруженной мобильной группы' },
+      { text: 'Индивидуальный менеджер' },
+      { text: 'Страхование ответственности' },
+      { text: 'Ведение журнала посещений' },
+      { text: 'Отчет по форме' },
+    ],
     price: 'от 180 000 ₽',
   },
   {
-    id: 'vip',
-    name: 'ТАРИФ «V.I.P»',
-    arming: 'Служебное',
+    id: 'prestige',
+    name: 'ТАРИФ «ПРЕСТИЖ»',
+    arming: 'Спецсредства',
     experience: 'Более 5 лет',
-    qualification: '5/6 разряд',
-    extras: ['Выезд мобильной группы', 'Еженедельный индивидуальный отчёт по стандартной форме'],
+    qualification: '4 разряд',
+    schedule: '24 часа',
+    extras: [
+      { text: 'Контроль доступа (пропускной режим)' },
+      { text: 'Патрулирование объекта' },
+      { text: 'Вызов экстренных служб' },
+      { text: 'Вызов вооруженной мобильной группы' },
+      { text: 'Индивидуальный менеджер' },
+      { text: 'Страхование ответственности' },
+      { text: 'Ведение журнала посещений' },
+      { text: 'Отчет в онлайн режиме во внутреннем мессенджере' },
+      { text: 'Еженедельная сводная отчетность по показателям' },
+      { text: 'Регулярные проверки инспекторской службой' },
+      { text: 'Услуги полиграфа до 2 р/мес', bold: true },
+      { text: 'Проверка безопасности контрагентов и сотрудников заказчика до 5 шт/мес', bold: true },
+    ],
     price: 'от 205 000 ₽',
+  },
+  {
+    id: 'spec',
+    name: 'ТАРИФ «СПЕЦ»',
+    arming: 'Служебное',
+    experience: 'Более 3 лет',
+    qualification: '6 разряд',
+    schedule: '24 часа',
+    extras: [
+      { text: 'Все функции пакета «Престиж»' },
+      { text: 'Комплекс мер физической защиты с правом применения табельного оружия для отражения вооруженного нападения' },
+    ],
+    price: 'от 365 000 ₽',
   },
 ];
 
@@ -59,7 +102,7 @@ export default function TariffsSection({ onOrderClick }: TariffsSectionProps) {
           Цены на профессиональную охрану объектов
         </h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6">
           {TARIFFS.map((tariff) => {
             const isSelected = selected === tariff.id;
             return (
@@ -68,7 +111,7 @@ export default function TariffsSection({ onOrderClick }: TariffsSectionProps) {
                 onClick={() => handleSelect(tariff.id)}
                 className="cursor-pointer flex flex-col rounded-sm overflow-hidden border border-white/10 transition-all duration-300"
                 style={{
-                  transform: isSelected ? 'scale(1.07)' : 'scale(1)',
+                  transform: isSelected ? 'scale(1.04)' : 'scale(1)',
                   boxShadow: isSelected
                     ? '0 0 0 2px #e8b84b, 0 8px 32px rgba(232,184,75,0.25)'
                     : '0 2px 12px rgba(0,0,0,0.3)',
@@ -100,6 +143,12 @@ export default function TariffsSection({ onOrderClick }: TariffsSectionProps) {
                       </span>
                       <span className="text-white text-sm text-right">{tariff.qualification}</span>
                     </div>
+                    <div className="flex justify-between items-baseline gap-2">
+                      <span className="text-secondary text-sm font-medium underline underline-offset-2 decoration-secondary/40 whitespace-nowrap">
+                        График работы:
+                      </span>
+                      <span className="text-white text-sm text-right">{tariff.schedule}</span>
+                    </div>
                     {tariff.extras && tariff.extras.length > 0 && (
                       <div className="pt-2 border-t border-white/10">
                         <span className="text-secondary text-sm font-medium underline underline-offset-2 decoration-secondary/40 block mb-2">
@@ -109,7 +158,7 @@ export default function TariffsSection({ onOrderClick }: TariffsSectionProps) {
                           {tariff.extras.map((extra, i) => (
                             <li key={i} className="text-white text-sm flex gap-2 items-start">
                               <Icon name="CircleCheck" size={15} className="text-secondary mt-0.5 shrink-0" />
-                              <span>{extra}</span>
+                              <span className={extra.bold ? 'font-bold' : ''}>{extra.text}</span>
                             </li>
                           ))}
                         </ul>
