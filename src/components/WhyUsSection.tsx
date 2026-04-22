@@ -39,7 +39,7 @@ export default function WhyUsSection() {
         <div className="absolute bottom-10 left-10 w-64 h-64 border-2 border-secondary rounded-full" />
       </div>
       <div className="container mx-auto px-4 relative z-10">
-        <h2 className="text-4xl md:text-5xl font-bold text-center mb-4">
+        <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold text-center mb-4">
           Почему нам доверяют безопасность
         </h2>
         <p className="text-center text-white/80 mb-12 max-w-2xl mx-auto">
@@ -52,8 +52,8 @@ export default function WhyUsSection() {
               className={`text-center p-6 ${isVisible ? 'animate-fade-in' : 'opacity-0'}`}
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              <div className="text-5xl md:text-6xl font-bold text-secondary mb-3">{stat.number}</div>
-              <p className="text-white/90 text-lg">{stat.label}</p>
+              <div className="text-4xl md:text-6xl font-bold text-secondary mb-3">{stat.number}</div>
+              <p className="text-white/90 text-base md:text-lg">{stat.label}</p>
             </div>
           ))}
         </div>

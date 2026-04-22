@@ -17,10 +17,10 @@ export default function HeroSection({ onCalculateClick, onServicesClick }: HeroS
       <div className="absolute inset-0 bg-gradient-to-r from-primary/95 via-primary/85 to-primary/70" />
       
       <div className="container mx-auto px-4 relative z-10 text-center animate-fade-in">
-        <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
+        <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
           Охрана и безопасность<br />вашего бизнеса 24/7
         </h1>
-        <p className="text-xl md:text-2xl text-white/90 mb-8 max-w-3xl mx-auto">
+        <p className="text-base sm:text-xl md:text-2xl text-white/90 mb-8 max-w-3xl mx-auto">
           Вооруженная и невооруженная охрана объектов, имущества и мероприятий с 2016 года
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">

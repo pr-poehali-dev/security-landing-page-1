@@ -35,11 +35,11 @@ export default function Header({ onCallbackClick }: HeaderProps) {
       <div className="container mx-auto px-4 py-3">
         <div className="flex items-center justify-between">
           <div className="flex items-center space-x-3">
-            <img src="https://cdn.poehali.dev/projects/45534d43-7897-42f9-b9af-85fef1d32bb2/bucket/2f3ff866-5ed9-43c7-b639-75716624cc39.png" alt="СП Гарант" className="h-20 w-20" />
+            <img src="https://cdn.poehali.dev/projects/45534d43-7897-42f9-b9af-85fef1d32bb2/bucket/2f3ff866-5ed9-43c7-b639-75716624cc39.png" alt="СП Гарант" className="h-12 w-12 lg:h-20 lg:w-20" />
             <div>
-              <p className="text-xs text-white/60 uppercase tracking-widest mb-0.5">Частное охранное предприятие</p>
-              <h1 className="text-3xl font-extrabold text-white leading-tight tracking-wide">СП Гарант</h1>
-              <p className="text-sm text-secondary font-medium italic">Надежность. Ответственность. Гарантия.</p>
+              <p className="hidden sm:block text-xs text-white/60 uppercase tracking-widest mb-0.5">Частное охранное предприятие</p>
+              <h1 className="text-xl lg:text-3xl font-extrabold text-white leading-tight tracking-wide">СП Гарант</h1>
+              <p className="hidden sm:block text-xs lg:text-sm text-secondary font-medium italic">Надежность. Ответственность. Гарантия.</p>
             </div>
           </div>
 

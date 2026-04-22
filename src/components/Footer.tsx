@@ -27,7 +27,7 @@ export default function Footer({ onCallbackClick }: FooterProps) {
   return (
     <footer id="contacts" className="bg-primary text-white pt-16 pb-8">
       <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 mb-12">
           <div>
             <div className="flex items-center space-x-3 mb-4">
               <img src="https://cdn.poehali.dev/projects/45534d43-7897-42f9-b9af-85fef1d32bb2/bucket/2f3ff866-5ed9-43c7-b639-75716624cc39.png" alt="СП Гарант" className="h-16 w-16" />
@@ -101,9 +101,9 @@ export default function Footer({ onCallbackClick }: FooterProps) {
         </div>
 
         <div className="border-t border-white/20 pt-8">
-          <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 text-sm text-white/60">
+          <div className="flex flex-col gap-4 text-sm text-white/60">
             <p>© 2026 ООО "ЧОП "СП Гарант". Все права защищены.</p>
-            <div className="flex flex-col md:flex-row gap-3 md:gap-6">
+            <div className="flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-6">
               {DOCS.map((doc) => (
                 <button
                   key={doc.key}

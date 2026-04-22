@@ -99,11 +99,11 @@ export default function TariffsSection({ onOrderClick }: TariffsSectionProps) {
   return (
     <section className="py-20 bg-[#0d1f2d]">
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl md:text-4xl font-extrabold text-white text-center mb-12">
+        <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-white text-center mb-8 md:mb-12">
           Цены на профессиональную охрану объектов
         </h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-4 md:gap-6">
           {TARIFFS.map((tariff) => {
             const isSelected = selected === tariff.id;
             return (

@@ -62,7 +62,7 @@ export default function AdvantagesSection() {
   return (
     <section id="advantages" ref={sectionRef} className="py-20 bg-white">
       <div className="container mx-auto px-4">
-        <h2 className="text-4xl md:text-5xl font-bold text-primary text-center mb-4">
+        <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold text-primary text-center mb-4">
           Ключевые преимущества работы с нами
         </h2>
         <div className="mb-12" />

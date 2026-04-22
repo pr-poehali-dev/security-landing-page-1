@@ -131,7 +131,7 @@ export default function GeographySection() {
   return (
     <section id="geography" ref={sectionRef} className="py-20 bg-white">
       <div className="container mx-auto px-4">
-        <h2 className="text-4xl md:text-5xl font-bold text-primary text-center mb-4">
+        <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold text-primary text-center mb-4">
           География нашей работы
         </h2>
         <p className="text-center text-muted-foreground mb-12">

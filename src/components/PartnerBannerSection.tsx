@@ -8,7 +8,7 @@ export default function PartnerBannerSection({ onCallbackClick }: PartnerBannerS
       <div className="container mx-auto px-4">
         <div className="flex flex-col md:flex-row items-center justify-between gap-10">
           <div className="flex-1 flex flex-col items-start gap-8">
-            <h2 className="text-3xl md:text-5xl font-extrabold text-white leading-tight uppercase">
+            <h2 className="text-2xl sm:text-3xl md:text-5xl font-extrabold text-white leading-tight uppercase">
               Приведи клиента —<br />получи дивиденды
             </h2>
             <button
