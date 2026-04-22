@@ -23,13 +23,13 @@ export default function PartnerBannerSection({ onCallbackClick }: PartnerBannerS
           <div className="flex-1 flex justify-center md:justify-end">
             <div className="relative">
               <img
-                src="https://cdn.poehali.dev/projects/45534d43-7897-42f9-b9af-85fef1d32bb2/bucket/1d38895e-5ba1-4f1e-8ab4-415f032e2862.png"
-                alt="Партнёрская программа"
+                src="https://cdn.poehali.dev/projects/45534d43-7897-42f9-b9af-85fef1d32bb2/files/3f6579bf-0524-4429-befe-f7c4b33abad8.jpg"
+                alt="Договор и деньги"
                 className="w-full max-w-sm rounded-lg object-cover opacity-90"
               />
               <div className="absolute bottom-6 right-4 bg-primary/80 border border-secondary/40 backdrop-blur-sm rounded px-4 py-3 flex flex-col gap-1">
-                <span className="text-secondary font-bold text-sm tracking-wide">1. Проценты от контракта</span>
-                <span className="text-secondary font-bold text-sm tracking-wide">2. Выплаты ежемесячно</span>
+                <span className="text-secondary font-bold text-sm tracking-wide">1. Выплата за заключение</span>
+                <span className="text-secondary font-bold text-sm tracking-wide">2. Проценты от суммы контракта</span>
               </div>
             </div>
           </div>
