@@ -25,8 +25,8 @@ export default function PartnerBannerSection({ onCallbackClick }: PartnerBannerS
               <img
                 src="https://cdn.poehali.dev/files/fe2df26f-0cfa-4337-a624-cdf827be0ea7.jpg"
                 alt="Договор и рубли"
-                className="w-full max-w-sm rounded-lg object-cover"
-                style={{ mixBlendMode: 'lighten', filter: 'brightness(0.9) contrast(1.05)' }}
+                className="w-full max-w-sm object-cover"
+                style={{ mixBlendMode: 'screen', filter: 'brightness(1.15) contrast(1.1) saturate(0.9)' }}
               />
               <div className="absolute bottom-6 right-4 bg-primary/80 border border-secondary/40 backdrop-blur-sm rounded px-4 py-3 flex flex-col gap-1">
                 <span className="text-secondary font-bold text-sm tracking-wide">1. Выплата за заключение</span>
