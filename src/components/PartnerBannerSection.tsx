@@ -23,7 +23,7 @@ export default function PartnerBannerSection({ onCallbackClick }: PartnerBannerS
           <div className="flex-1 flex justify-center md:justify-end">
             <div className="relative w-full max-w-sm">
               <img
-                src="https://cdn.poehali.dev/files/fe2df26f-0cfa-4337-a624-cdf827be0ea7.jpg"
+                src="https://cdn.poehali.dev/files/9d3546e9-b0a8-44ff-b765-e455fba88317.png"
                 alt="Договор и рубли"
                 className="w-full object-cover rounded-lg"
               />
