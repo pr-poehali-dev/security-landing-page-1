@@ -21,12 +21,20 @@ export default function PartnerBannerSection({ onCallbackClick }: PartnerBannerS
           </div>
 
           <div className="flex-1 flex justify-center md:justify-end">
-            <div className="relative">
+            <div className="relative w-full max-w-sm">
               <img
                 src="https://cdn.poehali.dev/files/fe2df26f-0cfa-4337-a624-cdf827be0ea7.jpg"
                 alt="Договор и рубли"
-                className="w-full max-w-sm object-cover"
-                style={{ mixBlendMode: 'screen', filter: 'brightness(1.15) contrast(1.1) saturate(0.9)' }}
+                className="w-full object-cover rounded-lg"
+              />
+              {/* Маска: плавное затухание по всем краям */}
+              <div
+                className="absolute inset-0 rounded-lg pointer-events-none"
+                style={{
+                  background: `
+                    radial-gradient(ellipse at center, transparent 40%, var(--color-primary) 85%)
+                  `,
+                }}
               />
               <div className="absolute bottom-6 right-4 bg-primary/80 border border-secondary/40 backdrop-blur-sm rounded px-4 py-3 flex flex-col gap-1">
                 <span className="text-secondary font-bold text-sm tracking-wide">1. Выплата за заключение</span>
