@@ -23,14 +23,9 @@ export default function PartnerBannerSection({ onCallbackClick }: PartnerBannerS
           <div className="flex-1 flex justify-center md:justify-end">
             <div className="relative">
               <img
-                src="https://cdn.poehali.dev/projects/45534d43-7897-42f9-b9af-85fef1d32bb2/files/05fe78c2-3c03-40c7-8f15-683cf57eace7.jpg"
+                src="https://cdn.poehali.dev/files/fe2df26f-0cfa-4337-a624-cdf827be0ea7.jpg"
                 alt="Договор и рубли"
-                className="w-full max-w-sm rounded-lg object-cover opacity-90"
-              />
-              <img
-                src="https://cdn.poehali.dev/projects/45534d43-7897-42f9-b9af-85fef1d32bb2/bucket/22873462-3d60-461b-a23b-9d45fbd5fdb7.png"
-                alt="Банкнота 5000 рублей"
-                className="absolute -bottom-6 -left-10 w-48 rotate-[-12deg] drop-shadow-xl"
+                className="w-full max-w-sm rounded-lg object-cover opacity-95"
               />
               <div className="absolute bottom-6 right-4 bg-primary/80 border border-secondary/40 backdrop-blur-sm rounded px-4 py-3 flex flex-col gap-1">
                 <span className="text-secondary font-bold text-sm tracking-wide">1. Выплата за заключение</span>
