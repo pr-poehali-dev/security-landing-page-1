@@ -29,12 +29,14 @@ export default function Footer({ onCallbackClick }: FooterProps) {
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 mb-12">
           <div>
-            <p className="text-xs text-white/50 uppercase tracking-widest mb-2">Частное охранное предприятие</p>
-            <div className="flex items-center space-x-3 mb-4">
-              <img src="https://cdn.poehali.dev/projects/45534d43-7897-42f9-b9af-85fef1d32bb2/bucket/2f3ff866-5ed9-43c7-b639-75716624cc39.png" alt="СП Гарант" className="h-16 w-16" />
-              <div>
-                <h3 className="text-2xl font-bold">СП Гарант</h3>
-                <p className="text-xs text-secondary italic">Надежность. Ответственность. Гарантия.</p>
+            <div className="mb-4">
+              <p className="text-xs text-white/50 uppercase tracking-widest mb-2">Частное охранное предприятие</p>
+              <div className="flex items-center space-x-3">
+                <img src="https://cdn.poehali.dev/projects/45534d43-7897-42f9-b9af-85fef1d32bb2/bucket/2f3ff866-5ed9-43c7-b639-75716624cc39.png" alt="СП Гарант" className="h-16 w-16" />
+                <div>
+                  <h3 className="text-2xl font-extrabold leading-tight">СП Гарант</h3>
+                  <p className="text-sm text-secondary italic mt-0.5">Надежность. Ответственность. Гарантия.</p>
+                </div>
               </div>
             </div>
             <p className="text-white/80 text-sm">ООО "ЧОП "СП Гарант"</p>
