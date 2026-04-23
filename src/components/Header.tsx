@@ -48,31 +48,39 @@ export default function Header({ onCallbackClick }: HeaderProps) {
               <div className="flex items-start space-x-4">
                 <div className="text-right">
                   <p className="text-secondary font-bold text-xs mb-0.5">Москва</p>
-                  <a href="tel:88007777112" className="text-white font-bold text-sm hover:text-secondary transition-colors block">
+                  <a href="tel:88007777112" className="text-white font-bold text-sm hover:text-secondary transition-colors block leading-tight">
                     8 (800) 7777 112
                   </a>
-                  <p className="text-white/60 text-[11px] leading-tight mt-0.5">123 112, Россия, г. Москва,<br/>Пресненская наб., 12, Башня Федерации</p>
+                  <p className="text-white/60 text-[11px] leading-tight mt-0.5">123 112, Россия</p>
+                  <p className="text-white/60 text-[11px] leading-tight">г. Москва, Пресненская наб., 12</p>
+                  <p className="text-white/60 text-[11px] leading-tight">Башня Федерации</p>
                 </div>
                 <div className="text-right">
                   <p className="text-secondary font-bold text-xs mb-0.5">Республика Крым</p>
-                  <a href="tel:+79789112112" className="text-white font-bold text-sm hover:text-secondary transition-colors block">
+                  <a href="tel:+79789112112" className="text-white font-bold text-sm hover:text-secondary transition-colors block leading-tight">
                     +7 (978) 9 112 112
                   </a>
-                  <p className="text-white/60 text-[11px] leading-tight mt-0.5">295 017, Россия, Республика Крым,<br/>г. Симферополь, ул. Воровского, 17</p>
+                  <p className="text-white/60 text-[11px] leading-tight mt-0.5">295 017, Россия</p>
+                  <p className="text-white/60 text-[11px] leading-tight">г. Симферополь</p>
+                  <p className="text-white/60 text-[11px] leading-tight">ул. Воровского, 17, БЦ Мараканд</p>
                 </div>
                 <div className="text-right">
                   <p className="text-secondary font-bold text-xs mb-0.5">Ростов-на-Дону</p>
-                  <a href="tel:88007777112" className="text-white font-bold text-sm hover:text-secondary transition-colors block">
+                  <a href="tel:88007777112" className="text-white font-bold text-sm hover:text-secondary transition-colors block leading-tight">
                     8 (800) 7777 112
                   </a>
-                  <p className="text-white/60 text-[11px] leading-tight mt-0.5">344 002, Россия, г. Ростов-на-Дону,<br/>ул. Социалистическая, 74, БЦ Купеческий двор</p>
+                  <p className="text-white/60 text-[11px] leading-tight mt-0.5">344 002, Россия</p>
+                  <p className="text-white/60 text-[11px] leading-tight">г. Ростов-на-Дону, ул. Социалистическая, 74</p>
+                  <p className="text-white/60 text-[11px] leading-tight">БЦ Купеческий двор</p>
                 </div>
                 <div className="text-right">
                   <p className="text-secondary font-bold text-xs mb-0.5">Новые территории</p>
-                  <a href="tel:88007777112" className="text-white font-bold text-sm hover:text-secondary transition-colors block">
+                  <a href="tel:88007777112" className="text-white font-bold text-sm hover:text-secondary transition-colors block leading-tight">
                     8 (800) 7777 112
                   </a>
-                  <p className="text-white/60 text-[11px] leading-tight mt-0.5">283 048, Россия, г. Донецк,<br/>ул. Артема, 130, ТРЦ Донецк-Сити</p>
+                  <p className="text-white/60 text-[11px] leading-tight mt-0.5">283 048, Россия</p>
+                  <p className="text-white/60 text-[11px] leading-tight">г. Донецк, ул. Артема, 130</p>
+                  <p className="text-white/60 text-[11px] leading-tight">ТРЦ Донецк-Сити</p>
                 </div>
               </div>
               <Button onClick={onCallbackClick} className="bg-secondary hover:bg-secondary/90 text-primary font-bold">
