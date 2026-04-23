@@ -117,9 +117,8 @@ export default function TariffsSection({ onOrderClick }: TariffsSectionProps) {
               <div
                 key={tariff.id}
                 onClick={() => handleSelect(tariff.id)}
-                className="cursor-pointer flex flex-col rounded-sm overflow-hidden border border-white/10 transition-all duration-300"
+                className={`cursor-pointer flex flex-col rounded-sm overflow-hidden border border-white/10 transition-all duration-300 sm:${isSelected ? 'scale-[1.04]' : 'scale-100'}`}
                 style={{
-                  transform: isSelected ? 'scale(1.04)' : 'scale(1)',
                   boxShadow: isSelected
                     ? '0 0 0 2px #e8b84b, 0 8px 32px rgba(232,184,75,0.25)'
                     : '0 2px 12px rgba(0,0,0,0.3)',
@@ -127,7 +126,7 @@ export default function TariffsSection({ onOrderClick }: TariffsSectionProps) {
                   position: 'relative',
                 }}
               >
-                <div className="bg-[#162535] px-6 pt-7 pb-6 flex-1 flex flex-col">
+                <div className="bg-[#162535] px-4 pt-5 pb-4 sm:px-6 sm:pt-7 sm:pb-6 flex-1 flex flex-col">
                   <h3 className="text-white font-extrabold text-base text-center tracking-wide mb-6">
                     {tariff.name}
                   </h3>
@@ -186,7 +185,7 @@ export default function TariffsSection({ onOrderClick }: TariffsSectionProps) {
                   </Button>
                 </div>
 
-                <div className="bg-[#0d1a26] border-t border-white/10 px-6 py-4 flex items-center justify-between gap-4">
+                <div className="bg-[#0d1a26] border-t border-white/10 px-4 sm:px-6 py-3 sm:py-4 flex items-center justify-between gap-4">
                   <div>
                     <p className="text-white/50 text-xs leading-tight">Стоимость в</p>
                     <p className="text-white/50 text-xs leading-tight">месяц</p>

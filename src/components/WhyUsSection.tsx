@@ -45,15 +45,15 @@ export default function WhyUsSection() {
         <p className="text-center text-white/80 mb-12 max-w-2xl mx-auto">
           Внедрение пропускных и внутриобъектовых режимов "под ключ"
         </p>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-8">
           {stats.map((stat, index) => (
             <div
               key={index}
-              className={`text-center p-6 ${isVisible ? 'animate-fade-in' : 'opacity-0'}`}
+              className={`text-center p-4 sm:p-6 ${isVisible ? 'animate-fade-in' : 'opacity-0'}`}
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              <div className="text-4xl md:text-6xl font-bold text-secondary mb-3">{stat.number}</div>
-              <p className="text-white/90 text-base md:text-lg">{stat.label}</p>
+              <div className="text-3xl sm:text-4xl md:text-6xl font-bold text-secondary mb-2 sm:mb-3">{stat.number}</div>
+              <p className="text-white/90 text-sm sm:text-base md:text-lg">{stat.label}</p>
             </div>
           ))}
         </div>

@@ -145,7 +145,7 @@ export default function GeographySection() {
           >
             <div
               ref={mapContainerRef}
-              className="w-full h-[400px] md:h-[480px]"
+              className="w-full h-[260px] sm:h-[350px] md:h-[480px]"
             />
             {!mapReady && (
               <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-primary/5 to-secondary/5">
@@ -158,7 +158,7 @@ export default function GeographySection() {
               <button
                 key={index}
                 onClick={() => handleRegionClick(index)}
-                className={`flex items-center space-x-3 p-4 rounded-lg border transition-all cursor-pointer text-left ${
+                className={`flex items-center space-x-3 p-3 sm:p-4 rounded-lg border transition-all cursor-pointer text-left ${
                   activeRegion === index
                     ? 'border-secondary bg-secondary/10 shadow-md'
                     : 'border-border hover:border-secondary/50'
@@ -171,7 +171,7 @@ export default function GeographySection() {
                     activeRegion === index ? 'text-secondary' : 'text-accent'
                   }`}
                 />
-                <span className={`text-lg font-medium transition-colors ${
+                <span className={`text-base sm:text-lg font-medium transition-colors ${
                   activeRegion === index ? 'text-secondary' : 'text-primary'
                 }`}>
                   {region.name}

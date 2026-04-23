@@ -36,9 +36,9 @@ export default function PartnerBannerSection({ onCallbackClick }: PartnerBannerS
                   `,
                 }}
               />
-              <div className="absolute bottom-6 right-4 bg-primary/80 border border-secondary/40 backdrop-blur-sm rounded px-4 py-3 flex flex-col gap-1">
-                <span className="text-secondary font-bold text-sm tracking-wide">1. Выплата за заключение</span>
-                <span className="text-secondary font-bold text-sm tracking-wide">2. Проценты от суммы контракта</span>
+              <div className="absolute bottom-3 right-2 sm:bottom-6 sm:right-4 bg-primary/80 border border-secondary/40 backdrop-blur-sm rounded px-3 py-2 sm:px-4 sm:py-3 flex flex-col gap-1">
+                <span className="text-secondary font-bold text-xs sm:text-sm tracking-wide">1. Выплата за заключение</span>
+                <span className="text-secondary font-bold text-xs sm:text-sm tracking-wide">2. Проценты от суммы контракта</span>
               </div>
             </div>
           </div>
