@@ -23,8 +23,8 @@ export default function PartnerBannerSection({ onCallbackClick }: PartnerBannerS
           <div className="flex-1 flex justify-center md:justify-end">
             <div className="relative">
               <img
-                src="https://cdn.poehali.dev/projects/45534d43-7897-42f9-b9af-85fef1d32bb2/files/05fe78c2-3c03-40c7-8f15-683cf57eace7.jpg"
-                alt="Договор и рубли"
+                src="https://cdn.poehali.dev/projects/45534d43-7897-42f9-b9af-85fef1d32bb2/files/11d4b2ff-b101-4d00-8c99-c470f0d94fc4.jpg"
+                alt="Банкноты 5000 рублей"
                 className="w-full max-w-sm rounded-lg object-cover opacity-90"
               />
               <div className="absolute bottom-6 right-4 bg-primary/80 border border-secondary/40 backdrop-blur-sm rounded px-4 py-3 flex flex-col gap-1">
