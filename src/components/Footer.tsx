@@ -27,7 +27,7 @@ export default function Footer({ onCallbackClick }: FooterProps) {
   return (
     <footer id="contacts" className="bg-primary text-white pt-16 pb-8">
       <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-8 mb-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-5 gap-8 mb-12">
           <div className="sm:col-span-2 xl:col-span-1">
             <div className="flex items-center space-x-3 mb-4">
               <img src="https://cdn.poehali.dev/projects/45534d43-7897-42f9-b9af-85fef1d32bb2/bucket/2f3ff866-5ed9-43c7-b639-75716624cc39.png" alt="СП Гарант" className="h-14 w-14 sm:h-20 sm:w-20 flex-shrink-0" />
@@ -77,6 +77,16 @@ export default function Footer({ onCallbackClick }: FooterProps) {
                   <span className="font-bold">+7 (978) 9 112 112</span>
                 </a>
               </div>
+              <div className="flex items-start space-x-2 text-white/80">
+                <Icon name="MapPin" className="h-5 w-5 flex-shrink-0 mt-0.5" />
+                <span className="text-sm">295 017, Россия, Республика Крым, г. Симферополь, ул. Воровского, 17, БЦ Мараканд</span>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <h4 className="text-xl font-bold mb-4">Ростов-на-Дону</h4>
+            <div className="space-y-3">
               <div>
                 <a href="tel:88007777112" className="flex items-center space-x-2 text-secondary hover:text-secondary/80 transition-colors">
                   <Icon name="Phone" className="h-5 w-5" />
@@ -86,48 +96,29 @@ export default function Footer({ onCallbackClick }: FooterProps) {
               </div>
               <div className="flex items-start space-x-2 text-white/80">
                 <Icon name="MapPin" className="h-5 w-5 flex-shrink-0 mt-0.5" />
-                <span className="text-sm">295 017, Россия, Республика Крым, г. Симферополь, ул. Воровского, 17, БЦ Мараканд</span>
-              </div>
-            </div>
-          </div>
-
-          <div className="sm:col-span-2 xl:col-span-1 grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-1 gap-8 xl:gap-0">
-            <div className="xl:mb-8">
-              <h4 className="text-xl font-bold mb-4">Ростов-на-Дону</h4>
-              <div className="space-y-3">
-                <div>
-                  <a href="tel:88007777112" className="flex items-center space-x-2 text-secondary hover:text-secondary/80 transition-colors">
-                    <Icon name="Phone" className="h-5 w-5" />
-                    <span className="font-bold">8 (800) 7777 112</span>
-                  </a>
-                  <p className="text-white/50 text-xs mt-0.5 ml-7">(многоканальный)</p>
-                </div>
-                <div className="flex items-start space-x-2 text-white/80">
-                  <Icon name="MapPin" className="h-5 w-5 flex-shrink-0 mt-0.5" />
-                  <span className="text-sm">344 002, Россия, г. Ростов-на-Дону, ул. Социалистическая, 74</span>
-                </div>
-              </div>
-            </div>
-
-            <div>
-              <h4 className="text-xl font-bold mb-4">Новые территории</h4>
-              <div className="space-y-3">
-                <div>
-                  <a href="tel:88007777112" className="flex items-center space-x-2 text-secondary hover:text-secondary/80 transition-colors">
-                    <Icon name="Phone" className="h-5 w-5" />
-                    <span className="font-bold">8 (800) 7777 112</span>
-                  </a>
-                  <p className="text-white/50 text-xs mt-0.5 ml-7">(многоканальный)</p>
-                </div>
-                <div className="flex items-start space-x-2 text-white/80">
-                  <Icon name="MapPin" className="h-5 w-5 flex-shrink-0 mt-0.5" />
-                  <span className="text-sm">283 048, Россия, г. Донецк, ул. Артема, 130</span>
-                </div>
+                <span className="text-sm">344 002, Россия, г. Ростов-на-Дону, ул. Социалистическая, 74, БЦ Купеческий двор</span>
               </div>
             </div>
           </div>
 
           <div>
+            <h4 className="text-xl font-bold mb-4">Новые территории</h4>
+            <div className="space-y-3">
+              <div>
+                <a href="tel:88007777112" className="flex items-center space-x-2 text-secondary hover:text-secondary/80 transition-colors">
+                  <Icon name="Phone" className="h-5 w-5" />
+                  <span className="font-bold">8 (800) 7777 112</span>
+                </a>
+                <p className="text-white/50 text-xs mt-0.5 ml-7">(многоканальный)</p>
+              </div>
+              <div className="flex items-start space-x-2 text-white/80">
+                <Icon name="MapPin" className="h-5 w-5 flex-shrink-0 mt-0.5" />
+                <span className="text-sm">283 048, Россия, г. Донецк, ул. Артема, 130, ТРЦ Донецк-Сити</span>
+              </div>
+            </div>
+          </div>
+
+          <div className="sm:col-span-2 xl:col-span-1">
             <h4 className="text-xl font-bold mb-4">Навигация</h4>
             <nav className="space-y-2 mb-6">
               <button onClick={() => scrollToSection('advantages')} className="block text-white/80 hover:text-secondary transition-colors">

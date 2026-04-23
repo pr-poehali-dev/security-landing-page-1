@@ -44,8 +44,8 @@ export default function Header({ onCallbackClick }: HeaderProps) {
           </div>
 
           <div className="hidden lg:flex flex-col items-end gap-2">
-            <div className="flex items-center space-x-6">
-              <div className="flex items-start space-x-6">
+            <div className="flex items-center space-x-4">
+              <div className="flex items-start space-x-4">
                 <div className="text-right">
                   <p className="text-secondary font-bold text-xs mb-0.5">Москва</p>
                   <a href="tel:88007777112" className="text-white font-bold text-sm hover:text-secondary transition-colors block">
@@ -54,11 +54,25 @@ export default function Header({ onCallbackClick }: HeaderProps) {
                   <p className="text-white/60 text-[11px] leading-tight mt-0.5">123 112, Россия, г. Москва,<br/>Пресненская наб., 12, Башня Федерации</p>
                 </div>
                 <div className="text-right">
-                  <p className="text-secondary font-bold text-xs mb-0.5">Крым</p>
+                  <p className="text-secondary font-bold text-xs mb-0.5">Республика Крым</p>
                   <a href="tel:+79789112112" className="text-white font-bold text-sm hover:text-secondary transition-colors block">
                     +7 (978) 9 112 112
                   </a>
                   <p className="text-white/60 text-[11px] leading-tight mt-0.5">295 017, Россия, Республика Крым,<br/>г. Симферополь, ул. Воровского, 17</p>
+                </div>
+                <div className="text-right">
+                  <p className="text-secondary font-bold text-xs mb-0.5">Ростов-на-Дону</p>
+                  <a href="tel:88007777112" className="text-white font-bold text-sm hover:text-secondary transition-colors block">
+                    8 (800) 7777 112
+                  </a>
+                  <p className="text-white/60 text-[11px] leading-tight mt-0.5">344 002, Россия, г. Ростов-на-Дону,<br/>ул. Социалистическая, 74, БЦ Купеческий двор</p>
+                </div>
+                <div className="text-right">
+                  <p className="text-secondary font-bold text-xs mb-0.5">Новые территории</p>
+                  <a href="tel:88007777112" className="text-white font-bold text-sm hover:text-secondary transition-colors block">
+                    8 (800) 7777 112
+                  </a>
+                  <p className="text-white/60 text-[11px] leading-tight mt-0.5">283 048, Россия, г. Донецк,<br/>ул. Артема, 130, ТРЦ Донецк-Сити</p>
                 </div>
               </div>
               <Button onClick={onCallbackClick} className="bg-secondary hover:bg-secondary/90 text-primary font-bold">
@@ -126,11 +140,25 @@ export default function Header({ onCallbackClick }: HeaderProps) {
                 <p className="text-white/60 text-[11px] leading-tight mt-1">123 112, Россия, г. Москва, Пресненская наб., 12, Башня Федерации</p>
               </div>
               <div>
-                <p className="text-secondary font-bold text-xs mb-1">Крым</p>
+                <p className="text-secondary font-bold text-xs mb-1">Республика Крым</p>
                 <a href="tel:+79789112112" className="text-white font-bold text-base block">
                   +7 (978) 9 112 112
                 </a>
                 <p className="text-white/60 text-[11px] leading-tight mt-1">295 017, Россия, Республика Крым, г. Симферополь, ул. Воровского, 17</p>
+              </div>
+              <div>
+                <p className="text-secondary font-bold text-xs mb-1">Ростов-на-Дону</p>
+                <a href="tel:88007777112" className="text-white font-bold text-base block">
+                  8 (800) 7777 112
+                </a>
+                <p className="text-white/60 text-[11px] leading-tight mt-1">344 002, Россия, г. Ростов-на-Дону, ул. Социалистическая, 74, БЦ Купеческий двор</p>
+              </div>
+              <div>
+                <p className="text-secondary font-bold text-xs mb-1">Новые территории</p>
+                <a href="tel:88007777112" className="text-white font-bold text-base block">
+                  8 (800) 7777 112
+                </a>
+                <p className="text-white/60 text-[11px] leading-tight mt-1">283 048, Россия, г. Донецк, ул. Артема, 130, ТРЦ Донецк-Сити</p>
               </div>
             </div>
             <Button onClick={onCallbackClick} className="bg-secondary hover:bg-secondary/90 text-primary font-bold w-full">
